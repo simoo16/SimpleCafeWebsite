@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+    z-index: 999999;
+}
+header > nav{
+    height: 100%;
+    display: flex;
+    color: white;
+    width: 500px;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 33px;
+    list-style-type: none;
+}
+ul li > a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    color: #CC9966;
+}
+a.active-link::after{
+    opacity: 1;
+    bottom: -6px;
+    transition: 266ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+nav .fa-bars{
+    display: none;
+}
+li > a::after{
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    background-color: #CC9966;
+    opacity: 0;
+    width: 100%;
+    height: 3px;
+    transition: 266ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+li > a:hover::after{
+    opacity: 1;
+    bottom: -6px;
+    transition: 266ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+#intro{
+    padding-top: 50px;
+    background-image: url(img/antique-cafe-bg-01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 15px;
+    gap: 33px;
+}
+#intro .intro-heading{
+    background-color: rgba(0,0,0,0.7);
+    width: min(470px, 95vw);
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 15px;
+}
+.intro-heading h1{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+}
+.intro-heading p{
+    color: #CC9966;
+    font-size: 20px;
+}
+#intro .intro-paragraph{
+    width: min(470px, 95vw);
+    height: auto;
+    background-color: rgba(0,0,0,0.7);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+#intro .explore-btn{
+    width: 233px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+}
+.explore-btn a{
+    text-decoration: none;
+    color: #CC9966;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.33s ease-in;
+}
+.explore-btn a:hover{
+    color: #ffffff;
+    transition: 0.33s ease-in;
+}
+#menu{
+    width: 100%;
+    height: auto;
+    padding-top: 33px;
+    background-image: url(img/antique-cafe-bg-02.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#menu .menu-heading{
+    background-color: white;
+    width: 260px;
+    height: 80px;
+    border: none;
+    outline: none;
+    border-radius: 6.99px;
+    text-align: center;
+    color: #544639;
+    padding: 10px;
+}
+#menu .menu-box{
+    width: min(512px, 100vw);
+    height: auto;
+    background-color: #544639;
+    border: none;
+    outline: none;
+    border-radius: 11px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu .menu-boxes{
+    width: 90vw;
+    height: 100%;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.menu-box .cafe-box{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cafe-box .cafe-img{
+    height: 100%;
+    width: 50%;
+    border-radius: 5%;
+}
+.cafe-box .cafe-info{
+    width: 90%;
+    padding: 13px;
+    height: 100%;
+}
+.cafe-heading{
+    color: #FC6;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+.price{
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.menu-box.right{
+    flex-direction: row-reverse;
+    text-align: right;
+}
+#about{
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    background-image: url(img/antique-cafe-bg-03.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+#about .about-our-cafe{
+    width: min(500px, 80vw);
+    height: auto;
+    background-color: rgb(214, 212, 212);
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    border-radius: 6.3px;
+    padding: 28px;
+}
+#about .about-our-cafe:hover{
+    box-shadow: 0 0 11px 0.33px rgba(0,0,0,0.7);
+    transition: 0.3s;
+    transform: translateY(-5px);
+}
+.about-our-cafe .about-our-cafe-heading{
+    color: #0a8585;
+    font-size: 30px;
+}
+.about-our-cafe .about-our-cafe-paragraph{
+    font-size: 20px;
+    word-wrap: break-word;
+}
+#contact{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/antique-cafe-bg-04.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+#contact .contact-box{
+    width: min(500px, 80vw);
+    height: 500px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 11px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact-box .input-box{
+    width: min(333px, 100%);
+    height: 33px;
+    position: relative;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 0.5vw;
+    font-size: 18px;
+    border-bottom: 2.2px solid #FC6;
+    color: #ffffff;
+}
+.input-box label{
+    font-family: 'Dancing Script', cursive;
+    color: #FC6;
+    font-size: 20px;
+    position: absolute;
+    top: 0.5vh;
+    left: 0.5vw;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+    top: -22px;
+    transition: 0.5s;
+    color: #CC9966;
+}
+.input-box input:focus{
+    transition: 0.5s;
+    border: 2px solid #CC9966;
+}
+#message{
+    width: min(340px, 100%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #FC6;
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+}
+#message:focus ~ label,
+#message:valid ~ label
+{
+    top: -20px;
+    transition: 0.5s;
+}
+#submit-msg-btn{
+    width: 166px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #0a8585;
+    color: white;
+    font-size: 18px;
+}
+@media only screen and (max-width: 490px) {
+   nav ul{
+    overflow: hidden;
+    display: none;
+    width: 0;
+    height: 0;
+   }
+   nav ul.active-menu{
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    right: 12vw;
+    width: 80vw;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,0.88);
+   }
+   nav .fa-bars{
+    display: block;
+    position: absolute;
+    right: 5.5vw;
+    top: 5.5vh;
+    color: #CC9966;
+    cursor: pointer;
+    z-index: 699;
+   }
+   #menu .menu-boxes{
+    align-items: center;
+    justify-content: center;
+   }
+}
+@media only screen and (max-width: 345px){
+    .menu-box{
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .cafe-box .cafe-info{
+        height: auto;
+    }
+}
