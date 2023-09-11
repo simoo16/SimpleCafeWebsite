@@ -19,25 +19,25 @@ window.onscroll = function(){
     }else{
         header.style.backgroundColor = "transparent"
     }
-    if(scrollValue < 500){
+    if(scrollValue < 515){
         headerLinks[1].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[0].classList.add("active-link")
     }
-    if(scrollValue > 500 && scrollValue < 1000) {
+    if(scrollValue > 600 && scrollValue < 1915) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[1].classList.add("active-link")
     }
-    if(scrollValue >= 1818) {
+    if(scrollValue >= 1915 && scrollValue < 2500) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[1].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[2].classList.add("active-link")
     }
-    if(scrollValue > 2444){
+    if(scrollValue > 2535){
         headerLinks[0].classList.remove("active-link")
         headerLinks[1].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
