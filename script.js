@@ -19,19 +19,19 @@ window.onscroll = function(){
     }else{
         header.style.backgroundColor = "transparent"
     }
-    if(scrollValue < 515){
+    if(scrollValue < 500){
         headerLinks[1].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[0].classList.add("active-link")
     }
-    if(scrollValue >= 515) {
+    if(scrollValue >= 1210 || scrollvalue >= 1818) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[1].classList.add("active-link")
     }
-    if(scrollValue >= 1200) {
+    if(scrollValue >= 2435) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[1].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
