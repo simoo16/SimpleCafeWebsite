@@ -13,30 +13,31 @@ headerLinks.forEach(hc => {
 })
 window.onscroll = function(){
     let scrollValue = window.scrollY
+    console.log(scrollValue)
     if(scrollValue > 50){
         header.style.backgroundColor = "rgba(0,0,0,0.7)"
     }else{
         header.style.backgroundColor = "transparent"
     }
-    if(scrollValue < 650){
+    if(scrollValue < 515){
         headerLinks[1].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[0].classList.add("active-link")
     }
-    if(scrollValue >= 650) {
+    if(scrollValue >= 515) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[1].classList.add("active-link")
     }
-    if(scrollValue >= 1900) {
+    if(scrollValue >= 1825) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[1].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
         headerLinks[2].classList.add("active-link")
     }
-    if(scrollValue > 2200){
+    if(scrollValue > 2435){
         headerLinks[0].classList.remove("active-link")
         headerLinks[1].classList.remove("active-link")
         headerLinks[2].classList.remove("active-link")
