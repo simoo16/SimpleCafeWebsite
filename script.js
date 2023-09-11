@@ -31,7 +31,7 @@ window.onscroll = function(){
         headerLinks[3].classList.remove("active-link")
         headerLinks[1].classList.add("active-link")
     }
-    if(scrollValue >= 1915 && scrollValue < 2500) {
+    if(scrollValue >= 1915) {
         headerLinks[0].classList.remove("active-link")
         headerLinks[1].classList.remove("active-link")
         headerLinks[3].classList.remove("active-link")
